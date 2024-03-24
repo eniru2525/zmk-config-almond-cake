@@ -5,5 +5,5 @@ type: shield
 features:
   - keys
 siblings:
-  - corne_left
-  - corne_right
+  - almond_cake_left
+  - almond_cake_right
