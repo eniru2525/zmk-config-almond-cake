@@ -1,0 +1,9 @@
+file_format: "1"
+id: almond_cake
+name: almond_cake
+type: shield
+features:
+  - keys
+siblings:
+  - corne_left
+  - corne_right
