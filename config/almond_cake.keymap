@@ -3,11 +3,10 @@
  *
  * SPDX-License-Identifier: MIT
  */
+
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 &mt {
     tapping-term-ms = <200>;
@@ -25,8 +24,28 @@
 
         ENT {
             bindings = <&kp ENTER>;
-            key-positions = <17 18>;
+            key-positions = <17 16>;
             timeout-ms = <50>;
+        };
+
+        BACKSP {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <6 7>;
+        };
+
+        DELT {
+            bindings = <&kp DELETE>;
+            key-positions = <7 8>;
+        };
+
+        CTL {
+            bindings = <&kp LCTRL>;
+            key-positions = <19 18>;
+        };
+
+        AL {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <18 17>;
         };
     };
 
@@ -61,7 +80,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp TAB>, <&kp GUI>;
+            bindings = <&kp TAB>, <&kp LEFT_GUI>;
         };
     };
 
@@ -70,73 +89,73 @@
 
         layer_0 {
             bindings = <
-                &kp Q          &kp W   &kp E    &kp R   &kp T                      &kp Y    &kp U    &kp I       &kp O               &kp P
-                &hm LSHFT A    &kp S   &kp D    &kp F   &kp G                      &kp H    &kp J    &kp K       &kp L               &kp SEMI
-                &hm LSHFT Z    &kp X   &kp C    &kp V   &kp B                      &kp N    &kp M    &kp COMMA   &hm LSHFT PERIOD    &hm LSHFT SLASH
-                                       &kp ESC  &td0    &lt 1 SPACE                &ltq 2 BSPC  &ltq 4 DEL  &kp GRAVE
+&kp Q        &kp W  &kp E    &kp R  &kp T        &kp Y        &kp U       &kp I      &kp O             &kp P
+&hm LSHFT A  &kp S  &kp D    &kp F  &kp G        &kp H        &kp J       &kp K      &kp L             &kp SEMI
+&hm LSHFT Z  &kp X  &kp C    &kp V  &kp B        &kp N        &kp M       &kp COMMA  &hm LSHFT PERIOD  &hm LSHFT SLASH
+                    &kp ESC  &td0   &lt 1 SPACE  &ltq 2 BSPC  &ltq 4 DEL  &kp GRAVE
             >;
         };
 
-        layer_1{
+        layer_1 {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                                    &trans    &trans    &trans                   &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_2 {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                                    &trans    &trans    &trans                   &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_3 {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                                    &trans    &trans    &trans                   &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_4 {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                                    &trans    &trans    &trans                   &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_5 {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                                    &trans    &trans    &trans                   &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_6 {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                                    &trans    &trans    &trans                   &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_7 {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans                   &trans    &trans    &trans    &trans    &trans
-                                    &trans    &trans    &trans                   &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
