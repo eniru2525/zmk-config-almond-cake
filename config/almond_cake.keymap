@@ -91,6 +91,13 @@
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp SQT>;
         };
+
+        td2: tap_dance_gui_mo2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "gui_mo2";
+            #binding-cells = <0>;
+            bindings = <&kp LWIN>, <&mo 2>;
+        };
     };
 
     keymap {
@@ -101,25 +108,25 @@
 &kp Q  &kp W  &kp E           &kp R  &kp T        &kp Y        &kp U       &kp I      &kp O             &kp P
 &kp A  &kp S  &kp D           &kp F  &kp G        &kp H        &kp J       &kp K      &kp L             &td1
 &kp Z  &kp X  &kp C           &kp V  &kp B        &kp N        &kp M       &kp COMMA  &hm LSHFT PERIOD  &hm LSHFT SLASH
-              &kp LEFT_SHIFT  &td0   &lt 1 SPACE  &ltq 2 BSPC  &ltq 4 DEL  &kp ESC
+              &kp LEFT_SHIFT  &td2   &lt 1 SPACE  &ltq 2 BSPC  &ltq 4 DEL  &kp ESC
             >;
         };
 
         left_shortcut_right_num {
             bindings = <
-&kp LC(LS(TAB))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(TAB)      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 5            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(LS(TAB))  &kp LC(W)  &kp LC(LA(A))  &kp LBKT   &kp RBKT   &kp MINUS  &kp N7     &kp N8  &kp N9  &kp N0
+&kp LC(TAB)      &kp LC(A)  &kp LC(S)      &kp LC(F)  &kp LG(V)  &kp EQUAL  &kp N4     &kp N5  &kp N6  &kp BSPC
+&mo 5            &kp LC(Z)  &kp LC(X)      &kp LC(C)  &kp LC(V)  &kp BSLH   &kp N1     &kp N2  &kp N3  &kp DOT
+                            &kp TAB        &kp LALT   &kp ENTER  &kp BSPC   &kp RSHFT  &trans
             >;
         };
 
-        right_num {
+        left_arrow_right_num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE     &trans          &kp UP    &kp LBKT   &kp RBKT       &kp MINUS  &kp N7  &kp N8  &kp N9  &kp N0
+&kp CAPSLOCK  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &kp PAGE_UP    &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp BSPC
+&trans        &trans          &kp HOME  &kp END    &kp PAGE_DOWN  &kp BSLH   &kp N1  &kp N2  &kp N3  &kp DOT
+                              &kp TAB   &kp LALT   &kp ENTER      &trans     &to 3   &mo 5
             >;
         };
 
@@ -132,16 +139,16 @@
             >;
         };
 
-        layer_4 {
+        extra_keys {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &kp PRINTSCREEN  &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP    &trans     &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &trans           &kp LC(CAPSLOCK)  &trans        &kp UP          &trans     &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &trans           &kp LA(CAPSLOCK)  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT  &trans
+                 &trans   &trans   &trans           &trans            &trans        &trans
             >;
         };
 
-        layer_5 {
+        bluetooth_keys {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
