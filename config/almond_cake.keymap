@@ -96,7 +96,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        basic {
             bindings = <
 &kp Q  &kp W  &kp E           &kp R  &kp T        &kp Y        &kp U       &kp I      &kp O             &kp P
 &kp A  &kp S  &kp D           &kp F  &kp G        &kp H        &kp J       &kp K      &kp L             &td1
@@ -105,7 +105,16 @@
             >;
         };
 
-        layer_1 {
+        left_shortcut_right_num {
+            bindings = <
+&kp LC(LS(TAB))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(TAB)      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 5            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        right_num {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -114,21 +123,12 @@
             >;
         };
 
-        layer_2 {
+        genshin_impact_qidong {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q  &kp W    &kp E         &kp R      &kp T         &kp Y  &kp U  &kp I      &kp LWIN
+&kp LCTRL  &kp A  &kp S    &kp D         &kp F      &kp NUMBER_1  &kp H  &kp J  &kp K      &kp L
+&kp LSHFT  &kp Z  &kp X    &kp C         &kp V      &kp B         &kp N  &kp M  &kp COMMA  &kp ESC
+                  &kp ESC  &kp LEFT_ALT  &kp SPACE  &kp NUMBER_2  &to 0  &none
             >;
         };
 
