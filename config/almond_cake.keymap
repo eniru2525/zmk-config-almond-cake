@@ -125,10 +125,10 @@
 
         left_shortcut_right_num {
             bindings = <
-&kp LC(LS(TAB))  &kp LC(W)  &kp LC(LA(A))  &kp LBKT   &kp RBKT   &kp MINUS  &kp N7     &kp N8  &kp N9  &kp N0
-&kp LC(TAB)      &kp LC(A)  &kp LC(S)      &kp LC(F)  &kp LG(V)  &kp EQUAL  &kp N4     &kp N5  &kp N6  &kp BSPC
-&mo 5            &kp LC(Z)  &kp LC(X)      &kp LC(C)  &kp LC(V)  &kp BSLH   &kp N1     &kp N2  &kp N3  &kp DOT
-                            &kp TAB        &kp LALT   &kp ENTER  &kp BSPC   &kp RSHFT  &trans
+&kp LC(LS(TAB))  &kp LC(W)  &kp LC(LA(A))  &as LEFT_BRACE LEFT_BRACKET  &as RIGHT_BRACE RIGHT_BRACKET  &as UNDERSCORE MINUS  &as AMPERSAND N7     &as ASTERISK N8       &as LEFT_PARENTHESIS N9  &as RIGHT_PARENTHESIS N0
+&kp LC(TAB)      &kp LC(A)  &kp LC(S)      &kp LC(F)                    &kp LG(V)                      &as PLUS EQUAL        &as DOLLAR NUMBER_4  &as PERCENT N5        &as CARET N6             &kp BSPC
+&mo 5            &kp LC(Z)  &kp LC(X)      &kp LC(C)                    &kp LC(V)                      &as PIPE BACKSLASH    &as EXCLAMATION N1   &as AT_SIGN NUMBER_2  &as HASH NUMBER_3        &kp DOT
+                            &kp TAB        &kp LALT                     &kp ENTER                      &kp BSPC              &kp RSHFT            &trans
             >;
         };
 
