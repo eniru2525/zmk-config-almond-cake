@@ -59,7 +59,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <180>;
+            quick-tap-ms = <0>;
             global-quick-tap;
         };
 
@@ -72,9 +72,8 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
 
-            quick-tap-ms = <200>;
+            quick-tap-ms = <180>;
             global-quick-tap;
-            retro-tap;
         };
 
         td0: tap_dance_tab_gui {
@@ -90,7 +89,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "semi_quo";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&kp SQT>;
+            bindings = <&as COLON SEMICOLON>, <&as DOUBLE_QUOTES SQT>;
         };
 
         td2: tap_dance_gui_mo2 {
@@ -98,6 +97,17 @@
             label = "gui_mo2";
             #binding-cells = <0>;
             bindings = <&kp LWIN>, <&mo 2>;
+        };
+
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <135>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
         };
     };
 
