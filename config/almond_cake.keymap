@@ -69,7 +69,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
 
             quick-tap-ms = <0>;
@@ -105,7 +105,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
