@@ -2,8 +2,11 @@ file_format: "1"
 id: almond_cake
 name: almond_cake
 type: shield
+requires: [pro_micro]
+exposes: [i2c_oled]
 features:
   - keys
+  - display
 siblings:
   - almond_cake_left
   - almond_cake_right
